@@ -16,6 +16,8 @@ max token을 넘어가게 되면 이전 내용을 잃어버리는게 아니라 s
 ## 5.4 ConversationKGMemory
 conversation에서 핵심 요소(entity)를 뽑아서 기억하는 방법
 ## 5.5 Memory on LLMChain
+LLM에 대화 내용을 전달해 줘야 그 내용을 바탕으로 대답을 함.
+memory를 만들어서 LLMChain에 전달하는 방법
 ## 5.6 Chat Based Memory
 ## 5.7 LCEL Based Memory
 ## 5.8 Recap
