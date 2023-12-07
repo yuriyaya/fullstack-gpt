@@ -10,5 +10,8 @@ example을 어떤것을 선택하느냐에 따라 결과가 달라질 수 있어
 단순히 길이로 자를 수도 있고, 리스트에 담긴 예제 중 일부만 선택해서 넣을 수 있음.
 예시로 돌려본게 별로 복잡하지 않은 경우라 example selector가 별로 체감이 되지 않는 것일 수도 있지만, 비용을 위해 예제를 일부만 넣어야 한다거나, example의 패턴이 다양해서 특정 example만 넣어야 할 경우에 적용할 수 있지 않을까...
 ## 4.4 Serialization and Composition
+prompt를 json이나 yaml파일로 부터 읽어오는 방법
+prompt를 여러개로 쪼개서 관리할 수도 있음. 나누어져 있는 prompt를 합쳐서 사용할 수도 있음
+합친 prompt를 가지고 chain invoke해서 답변을 받을 수도 있음
 ## 4.5 Caching
 ## 4.6 Serialization
