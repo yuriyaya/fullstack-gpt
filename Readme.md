@@ -10,3 +10,7 @@ prompt를 template으로 만들어서 사용하기
 ## 3.3 OutputParser and LCEL
 - output parser를 통해서 응답으로 온 메세지를 재 가공 할 수 있음: e.g. 특정 형식으로 바꾸어서 DB에 넣어준다거나 할 수 있다는것
 - LCEL: Lang Chain Expression Language, | operator로 많은것들을 pieline으로 만들어서 코드가 훨씬 짧아질 수 있다. 형식도 훨씬 깔끔...
+## 3.4 Chaining Chains
+prompt의 결과물을 다른 prompt에 넣을 수 이음. 연쇄적인 질문과 답변 가능
+ChatGPT처럼 답변 나오는걸 보고 싶으면 chat model에서 streaming option을 켜주고 callback 설정 필요
+## 3.5 Recap
