@@ -19,5 +19,6 @@ conversation에서 핵심 요소(entity)를 뽑아서 기억하는 방법
 LLM에 대화 내용을 전달해 줘야 그 내용을 바탕으로 대답을 함.
 memory를 만들어서 LLMChain에 전달하는 방법
 ## 5.6 Chat Based Memory
+앞에 내용이랑 동일한 목적인데 chat history를 message 형식으로 생성해서 전달해 주는 방법
 ## 5.7 LCEL Based Memory
 ## 5.8 Recap
