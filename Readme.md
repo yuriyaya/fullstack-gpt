@@ -7,6 +7,8 @@
 window의 사이즈를 정해놓고 정해놓은 숫자 만큼의 대화를 기억함.
 메모리는 절약할 수 있지만 예전 대화는 잃어버림
 ## 5.2 ConversationSummaryMemory
+대화 내용을 요약해서 저장해 줌.
+초기에는 간단한 문장을 말 잘 하는 모드로 저장해 주기 때문에 토큰이 더 들 수는 있지만, 대화 내용이 길어질수록 더 유용함.
 ## 5.3 ConversationSummaryBufferMemory
 ## 5.4 ConversationKGMemory
 ## 5.5 Memory on LLMChain
