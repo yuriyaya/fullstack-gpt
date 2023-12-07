@@ -10,6 +10,9 @@ window의 사이즈를 정해놓고 정해놓은 숫자 만큼의 대화를 기�
 대화 내용을 요약해서 저장해 줌.
 초기에는 간단한 문장을 말 잘 하는 모드로 저장해 주기 때문에 토큰이 더 들 수는 있지만, 대화 내용이 길어질수록 더 유용함.
 ## 5.3 ConversationSummaryBufferMemory
+Buffer와 Summary를 통합해서 사용할 수 있도록 해줌
+기본적으로 설정된 max token에 도달할 때 까지는 Buffer와 동일하게 동작하지만
+max token을 넘어가게 되면 이전 내용을 잃어버리는게 아니라 summary 해서 가지고 있음. 
 ## 5.4 ConversationKGMemory
 ## 5.5 Memory on LLMChain
 ## 5.6 Chat Based Memory
