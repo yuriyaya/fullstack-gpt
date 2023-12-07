@@ -14,6 +14,7 @@ Buffer와 Summary를 통합해서 사용할 수 있도록 해줌
 기본적으로 설정된 max token에 도달할 때 까지는 Buffer와 동일하게 동작하지만
 max token을 넘어가게 되면 이전 내용을 잃어버리는게 아니라 summary 해서 가지고 있음. 
 ## 5.4 ConversationKGMemory
+conversation에서 핵심 요소(entity)를 뽑아서 기억하는 방법
 ## 5.5 Memory on LLMChain
 ## 5.6 Chat Based Memory
 ## 5.7 LCEL Based Memory
