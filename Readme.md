@@ -21,4 +21,5 @@ memory를 만들어서 LLMChain에 전달하는 방법
 ## 5.6 Chat Based Memory
 앞에 내용이랑 동일한 목적인데 chat history를 message 형식으로 생성해서 전달해 주는 방법
 ## 5.7 LCEL Based Memory
+chain에 chat history memory를 전달해 주고 대화해서 결과를 얻는 방법
 ## 5.8 Recap
