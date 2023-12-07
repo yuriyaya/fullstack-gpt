@@ -14,4 +14,7 @@ prompt를 json이나 yaml파일로 부터 읽어오는 방법
 prompt를 여러개로 쪼개서 관리할 수도 있음. 나누어져 있는 prompt를 합쳐서 사용할 수도 있음
 합친 prompt를 가지고 chain invoke해서 답변을 받을 수도 있음
 ## 4.5 Caching
+반복되는 질문의 경우 매번 다시 물어보면 시간도 오래걸리고 비용도 소모되기 때문에 답변을 cache로 만들어 두는 기능이 있음
+메모리에 그냥 임시로 올려놓거나, DB에 올려놓거나 하는 옵션이 있는데, 이외에도 Redis DB나 Casandra 등 다양한 방법의 caching을 지원함.
+또한 set_debug 옵션을 켜서 LLM이 동작하는것을 디버깅 할 수도 있음. chain처럼 여러 스텝을 구현한 상황에서 사용하기 유용함.
 ## 4.6 Serialization
