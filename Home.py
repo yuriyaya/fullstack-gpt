@@ -1,7 +1,10 @@
 import streamlit as st
+from langchain.prompts import PromptTemplate
 
-st.title("Hello World!!")
-st.subheader("Welcome")
-st.markdown("""
-### I love it!
-""")
+st.write("Hello")
+
+st.write([1, 2, 3, 4])
+
+st.write({"x": 1})
+
+st.selectbox("Choose your model", ("GPT-3", "GPT-4"))

@@ -2,6 +2,11 @@
 ## 7.0 Introduction
 streamlit: create UI from python code
 ## 7.1 Magic
+보통 .write 함수를 써서 안에 있는 내용을 화면에 표시하는데, 그냥 변수만 두어도 화면에 표시됨. 그치만 그냥 .write를 쓰자
+
+streamlit 문서: https://docs.streamlit.io/
+
+https://streamlit.io/components
 ## 7.2 Data Flow
 ## 7.3 Multi Page
 ## 7.4 Chat Messages
