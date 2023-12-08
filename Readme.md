@@ -39,6 +39,25 @@ local storage에 caching 하는 방법
 ## 6.5 Langsmith
 https://smith.langchain.com/
 ## 6.6 RetrievalQA
+stuff 방식 :
+
+source doc를 분해해서 질문에 맞는 작은 문서들을 찾아내고 작은 문서들의 내용을 조합해서 system prompt 문장을 생성하고 chat model에 질문해서 결과로 만들어 줌.
+RetrievalQA는 이 과정을 자동으로 해주는 기능임.
+
+langsmith를 통해서 보면, 과정들을 자세히 볼 수 있음. 문서에서 어떤 부분을 선택했고 그것을 바탕으로 어떻게 system prompt문장을 생성했는지 과정들이 다 보임.
+
+refine 방식 :
+
+refine 방식은 매 document 마다 질문을 물어보고 답변을 얻어서 그 결과를 종합해서 결과를 냄. stuff보다는 좀 더 비용이 드는 방법.
+
+map reduced document chain 방식 :
+
+매 document를 summary 한 후 summary된 document 들(=reduced)를 가지고 질답을 함.
+
+map re-rank
+
+map 방식에 랭킹을 도입해서 ranking이 높은 것으로 답변을 구성
+
 ## 6.7 Recap
 ## 6.8 Stuff LCEL Chain
 ## 6.9 Map Reduce LCEL Chain
