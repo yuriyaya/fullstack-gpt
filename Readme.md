@@ -10,6 +10,26 @@ splitter: 파일을 분할하기. 단순 분할의 경우 분할된 크기가 �
 ## 6.2 TikToken
 AI 모델이 하는 것 처럼 token base로 source data를 encoding 하도록 하기
 ## 6.3 Vectors
+computer가 이해할 수 있도록 split된 data를 숫자로 변경. vector. (OpneAI는 1000차원 벡터 사용한다고 함)
+
+Masculinity, Femininity, Royalty 세가지 차원의 벡터를 사용해서 단어를 평가? 정의?해 보자.
+
+king = 0.9 | 0.1 | 1.0
+
+queen = 0.1 | 0.9 | 1.0
+
+man = 0.9 | 0.1 | 0.0
+
+woman = 0.1 | 0.9 | 0.0
+
+이렇게 숫자로 정의하면 단어간 연산이 가능함.
+
+예를 들어, king - man = 0.0 | 0.0 | 1.0 = Royalty 라는 단어가 뿅
+
+Royalty + woman = 0.1 | 0.9 | 1.0 = queen 이 됨!
+
+벡터를 통해서 단어간 관계를 추출할 수 있고 근접성은 추천 알고리즘에서 사용 가능함
+
 ## 6.4 Vector Store
 ## 6.5 Langsmith
 ## 6.6 RetrievalQA
