@@ -37,6 +37,7 @@ tool: Chroma
 
 local storage에 caching 하는 방법
 ## 6.5 Langsmith
+https://smith.langchain.com/
 ## 6.6 RetrievalQA
 ## 6.7 Recap
 ## 6.8 Stuff LCEL Chain
