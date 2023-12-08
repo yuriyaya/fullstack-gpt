@@ -31,6 +31,11 @@ Royalty + woman = 0.1 | 0.9 | 1.0 = queen 이 됨!
 벡터를 통해서 단어간 관계를 추출할 수 있고 근접성은 추천 알고리즘에서 사용 가능함
 
 ## 6.4 Vector Store
+embedding은 돈이 들기 때문에 매번 하지 않고 caching을 하는게 좋음 - vector store
+
+tool: Chroma
+
+local storage에 caching 하는 방법
 ## 6.5 Langsmith
 ## 6.6 RetrievalQA
 ## 6.7 Recap
