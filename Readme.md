@@ -10,6 +10,7 @@ https://streamlit.io/components
 ## 7.2 Data Flow
 streamlit은 사용자의 interaction에 의해 데이터가 바뀌면 파일 전체가 refresh됨. 전체가 다시 실행됨.
 ## 7.3 Multi Page
+pages 폴더안에 있는 페이지 들을 sidebar에 표시함
 ## 7.4 Chat Messages
 ## 7.5 Recap
 ## 7.6 Uploading Documents
