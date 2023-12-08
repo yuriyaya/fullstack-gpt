@@ -29,4 +29,7 @@ document가 존재하는한 chat history를 유지하는데, file이 삭제되�
 
 ![chap7_8](./doc_image/chap7_8.png)  
 ## 7.9 Streaming
+답변을 생성하는 동안 답변을 스트리밍 하도록 구현. 답변 생성될 때까지 무조건 기다리지 않도록.
+
+callback handler에서 llm이 token을 생성할 때 마다 callback을 받는 함수가 있어서 이 함수를 이용하면 token을 받을 때 마다 화면에 뭔가 그리도록 할 수 있음.
 ## 7.10 Recap

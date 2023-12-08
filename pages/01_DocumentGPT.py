@@ -1,3 +1,5 @@
+from typing import Any, Dict, List, Optional, Union
+from uuid import UUID
 import streamlit as st
 import time
 
@@ -9,20 +11,46 @@ from langchain.embeddings import OpenAIEmbeddings, CacheBackedEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.prompts import ChatPromptTemplate
 from langchain.schema.runnable import RunnablePassthrough, RunnableLambda
+from langchain.callbacks.base import BaseCallbackHandler
 
 st.set_page_config(
     page_title="DocumentGPT",
     page_icon="📃",
 )
 
-llm = ChatOpenAI(temperature=0.1)
+
+class ChatCallbackHandler(BaseCallbackHandler):
+    message = ""
+
+    def on_llm_start(self, *args, **kwargs):
+        self.message_box = st.empty()
+
+    def on_llm_end(self, *args, **kwargs):
+        save_message(self.message, "ai")
+
+    def on_llm_new_token(self, token, *args, **kwargs):
+        self.message += token
+        self.message_box.markdown(self.message)
+
+
+llm = ChatOpenAI(
+    temperature=0.1,
+    streaming=True,
+    callbacks=[
+        ChatCallbackHandler(),
+    ],
+)
+
+
+def save_message(message, role):
+    st.session_state["msgs"].append({"msg": message, "role": role})
 
 
 def send_message(msg, role, save=True):
     with st.chat_message(role):
         st.markdown(msg)
     if save:
-        st.session_state["msgs"].append({"msg": msg, "role": role})
+        save_message(msg, role)
 
 
 def paint_history():
@@ -104,7 +132,8 @@ if file:
             | prompt
             | llm
         )
-        response = chain.invoke(human_input)
-        send_message(response.content, "ai")
+        with st.chat_message("ai"):
+            response = chain.invoke(human_input)
+
 else:
     st.session_state["msgs"] = []
