@@ -12,6 +12,23 @@ st.set_page_config(
     page_icon="📃",
 )
 
+# commented out, because it will be initialized if file is None case
+# if "msgs" not in st.session_state:
+#     st.session_state["msgs"] = []
+
+
+def send_message(msg, role, save=True):
+    with st.chat_message(role):
+        st.markdown(msg)
+    if save:
+        st.session_state["msgs"].append({"msg": msg, "role": role})
+
+
+def paint_history():
+    for msg in st.session_state["msgs"]:
+        send_message(msg["msg"], msg["role"], False)
+
+
 st.title("DocumentGPT")
 
 st.markdown(
@@ -23,6 +40,7 @@ Use this chatbot to ask questions to an AI about your files!
 )
 
 
+@st.cache_data(show_spinner="Embedding file...")
 def embed_file(file):
     file_content = file.read()
     file_path = f"./.cache/files/{file.name}"
@@ -46,12 +64,18 @@ def embed_file(file):
     return retriever
 
 
-file = st.file_uploader(
-    "Upload a .txt .pdf or .docx file",
-    type=["pdf", "txt", "docx"],
-)
+with st.sidebar:
+    file = st.file_uploader(
+        "Upload a .txt .pdf or .docx file",
+        type=["pdf", "txt", "docx"],
+    )
 
 if file:
     retriever = embed_file(file)
-    s = retriever.invoke("Winston")
-    s
+    send_message("I'm ready. Ask away!", "ai", False)
+    paint_history()
+    human_input = st.chat_input("Ask anything about your file...")
+    if human_input:
+        send_message(human_input, "human")
+else:
+    st.session_state["msgs"] = []

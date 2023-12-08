@@ -19,6 +19,11 @@ st.session_state : session의 data를 보존해 줌
 ## 7.6 Uploading Documents
 document upload(=다른 폴더에 저장 해 두고) embedding을 진행해서 embedding도 파일 별로 정리하기
 ## 7.7 Chat History
+@st.cache_data: decorator, 함수 아래의 실행 내역이 같다면, 다시 실행하지 않음. embedding 함수에 붙여주면 embedding을 매번 하지 않게 되므로 시간과 돈을 절약
+
+새로운 입력이 입력되면 그 내용을 session state에 저장하고, 그동안 입력된 chat history를 화면에 그린다.
+
+document가 존재하는한 chat history를 유지하는데, file이 삭제되면 chat history도 초기화 해줌.
 ## 7.8 Chain
 ## 7.9 Streaming
 ## 7.10 Recap
