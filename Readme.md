@@ -12,6 +12,9 @@ streamlit은 사용자의 interaction에 의해 데이터가 바뀌면 파일 �
 ## 7.3 Multi Page
 pages 폴더안에 있는 페이지 들을 sidebar에 표시함
 ## 7.4 Chat Messages
+st.chat_message : chat 대화 형식으로 UI를 출력해 줌
+
+st.session_state : session의 data를 보존해 줌
 ## 7.5 Recap
 ## 7.6 Uploading Documents
 ## 7.7 Chat History
