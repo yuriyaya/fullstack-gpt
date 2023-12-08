@@ -58,6 +58,7 @@ map re-rank
 
 map 방식에 랭킹을 도입해서 ranking이 높은 것으로 답변을 구성
 
+ref. https://python.langchain.com/docs/modules/chains/document/
 ## 6.7 Recap
 ## 6.8 Stuff LCEL Chain
 ## 6.9 Map Reduce LCEL Chain
