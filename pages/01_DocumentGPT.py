@@ -1,20 +1,21 @@
 import streamlit as st
 import time
 
+from langchain.chat_models import ChatOpenAI
 from langchain.storage import LocalFileStore
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.document_loaders import UnstructuredFileLoader
 from langchain.embeddings import OpenAIEmbeddings, CacheBackedEmbeddings
 from langchain.vectorstores import FAISS
+from langchain.prompts import ChatPromptTemplate
+from langchain.schema.runnable import RunnablePassthrough, RunnableLambda
 
 st.set_page_config(
     page_title="DocumentGPT",
     page_icon="📃",
 )
 
-# commented out, because it will be initialized if file is None case
-# if "msgs" not in st.session_state:
-#     st.session_state["msgs"] = []
+llm = ChatOpenAI(temperature=0.1)
 
 
 def send_message(msg, role, save=True):
@@ -28,6 +29,24 @@ def paint_history():
     for msg in st.session_state["msgs"]:
         send_message(msg["msg"], msg["role"], False)
 
+
+def format_docs(docs):
+    return "\n\n".join(document.page_content for document in docs)
+
+
+prompt = ChatPromptTemplate.from_messages(
+    [
+        (
+            "system",
+            """
+            Answer the question using ONLY the following context. If you don't know the answer just say you don't know. DON'T make anything up.
+            
+            Context: {context}
+            """,
+        ),
+        ("human", "{question}"),
+    ]
+)
 
 st.title("DocumentGPT")
 
@@ -77,5 +96,15 @@ if file:
     human_input = st.chat_input("Ask anything about your file...")
     if human_input:
         send_message(human_input, "human")
+        chain = (
+            {
+                "context": retriever | RunnableLambda(format_docs),
+                "question": RunnablePassthrough(),
+            }
+            | prompt
+            | llm
+        )
+        response = chain.invoke(human_input)
+        send_message(response.content, "ai")
 else:
     st.session_state["msgs"] = []

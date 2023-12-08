@@ -25,5 +25,8 @@ document upload(=다른 폴더에 저장 해 두고) embedding을 진행해서 e
 
 document가 존재하는한 chat history를 유지하는데, file이 삭제되면 chat history도 초기화 해줌.
 ## 7.8 Chain
+입력 받은 docment를 chain으로 구성해서 유저 질문에 따른 응답을 출력하기
+
+![chap7_8](./doc_image/chap7_8.png)  
 ## 7.9 Streaming
 ## 7.10 Recap
