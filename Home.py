@@ -15,7 +15,7 @@ Welcome to my FullstackGPT Homepage!
 
 Here are the apps I provide:
 
-- [ ] [DocumentGPT](/DocumentGPT)
+- [x] [DocumentGPT](/DocumentGPT)
 - [ ] [PrivateGPT](/PrivateGPT)
 - [ ] [QuizGPT](/QuizGPT)
 - [ ] [SiteGPT](/SiteGPT)

@@ -133,7 +133,7 @@ if file:
             | llm
         )
         with st.chat_message("ai"):
-            response = chain.invoke(human_input)
+            chain.invoke(human_input)
 
 else:
     st.session_state["msgs"] = []
