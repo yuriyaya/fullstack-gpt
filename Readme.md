@@ -64,5 +64,10 @@ ref. https://python.langchain.com/docs/modules/chains/document/
 retriever를 사용해서 stuff type chain을 만들고 질문을 chap prompt에 맞게 전달하는 방법을 manual 구현하는 방법
 
 vector store를 retriever로 바꾸어서 전체를 다 context로 전달 하고, 전체 내용이 prompt에 전달되어서 질문에 대한 답을 구하는 과정.
+
+cf. Chroma vector store는 왜인지 답변이 잘 안나와서 FAISS로 교체함.
 ## 6.9 Map Reduce LCEL Chain
+langsmith에서 본 것 처럼 document 마다 질문을 해서 답변을 얻고, 답변을 하나의 string으로 합친 다음, 합친 string에 다시 질문을 해서 답변을 얻음.
+
+stuff 방식보다 좀 더 오래 걸리고(document 순회도 하고...) 답변은 더 자세해 졌다!
 ## 6.10 Recap
