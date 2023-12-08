@@ -8,6 +8,7 @@ streamlit 문서: https://docs.streamlit.io/
 
 https://streamlit.io/components
 ## 7.2 Data Flow
+streamlit은 사용자의 interaction에 의해 데이터가 바뀌면 파일 전체가 refresh됨. 전체가 다시 실행됨.
 ## 7.3 Multi Page
 ## 7.4 Chat Messages
 ## 7.5 Recap

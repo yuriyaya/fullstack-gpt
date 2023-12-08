@@ -1,10 +1,7 @@
 import streamlit as st
-from langchain.prompts import PromptTemplate
-
-st.write("Hello")
-
-st.write([1, 2, 3, 4])
-
-st.write({"x": 1})
 
 st.selectbox("Choose your model", ("GPT-3", "GPT-4"))
+
+name = st.text_input("What is your name?")
+
+st.write(name)
