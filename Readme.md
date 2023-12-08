@@ -61,5 +61,8 @@ map 방식에 랭킹을 도입해서 ranking이 높은 것으로 답변을 구�
 ref. https://python.langchain.com/docs/modules/chains/document/
 ## 6.7 Recap
 ## 6.8 Stuff LCEL Chain
+retriever를 사용해서 stuff type chain을 만들고 질문을 chap prompt에 맞게 전달하는 방법을 manual 구현하는 방법
+
+vector store를 retriever로 바꾸어서 전체를 다 context로 전달 하고, 전체 내용이 prompt에 전달되어서 질문에 대한 답을 구하는 과정.
 ## 6.9 Map Reduce LCEL Chain
 ## 6.10 Recap
