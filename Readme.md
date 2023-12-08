@@ -17,6 +17,7 @@ st.chat_message : chat 대화 형식으로 UI를 출력해 줌
 st.session_state : session의 data를 보존해 줌
 ## 7.5 Recap
 ## 7.6 Uploading Documents
+document upload(=다른 폴더에 저장 해 두고) embedding을 진행해서 embedding도 파일 별로 정리하기
 ## 7.7 Chat History
 ## 7.8 Chain
 ## 7.9 Streaming
