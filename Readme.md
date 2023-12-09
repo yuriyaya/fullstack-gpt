@@ -7,6 +7,9 @@ SitemapLoader를 통해서 sitemap 정보를 생성하고 관련된 metadata도 
 
 하지만 SSL error가 나서 동작하지 않는다 ㅠㅠ
 ## 10.3 Parsing Function
+filtering url, text 정리(soup 사용해서), split 하기 까지
+
+여전히 에러로 동작 확인은 못해봄
 ## 10.4 Map Re Rank Chain
 ## 10.5 Map Re Rank Chain part Two
 ## 10.6 Code Challenge
