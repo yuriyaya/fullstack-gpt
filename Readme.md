@@ -20,6 +20,7 @@ formatting prompt를 만들고 생성한 퀴즈를 formatting chain에 넣어서
 ## 9.5 Output Parser
 formatting 된 결과를 output parser를 통해서 json object로 변경
 ## 9.6 Caching
+wikipedia search하는 동작이랑 quiz 생성하는 동작을 streamlit에서 cache 해서 반복적으로 동작하지 않도록 수정
 ## 9.7 Grading Question
 ## 9.8 Function Calling
 ## 9.9 Conclusion
