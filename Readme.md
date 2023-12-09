@@ -11,6 +11,9 @@ GPT 모델에 따라서 가격과 context window(한번에 볼 수 있는 토큰
 
 Tokenizer: https://platform.openai.com/tokenizer
 ## 9.3 Questions Prompt
+문서를 주고 quiz를 생성하도록 하기. prompt를 자세하게 써서 의도에 맞게 생성하도록 해야 함.
+
+wikipedia retriever는 왜인지 작동을 하지 않는다. 에러 발생... 검색해도 이유를 모르겠음.
 ## 9.4 Formatter Prompt
 ## 9.5 Output Parser
 ## 9.6 Caching
