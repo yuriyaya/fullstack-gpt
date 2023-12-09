@@ -14,6 +14,7 @@ Tokenizer: https://platform.openai.com/tokenizer
 문서를 주고 quiz를 생성하도록 하기. prompt를 자세하게 써서 의도에 맞게 생성하도록 해야 함.
 
 wikipedia retriever는 왜인지 작동을 하지 않는다. 에러 발생... 검색해도 이유를 모르겠음.
+==> top_k_results를 5로 하니까 잘 동작함. 1로 하면 동작 안함...
 ## 9.4 Formatter Prompt
 formatting prompt를 만들고 생성한 퀴즈를 formatting chain에 넣어서 원하는대로 formatting 해달라고 함.
 ## 9.5 Output Parser
