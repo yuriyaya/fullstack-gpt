@@ -24,4 +24,7 @@ wikipedia search하는 동작이랑 quiz 생성하는 동작을 streamlit에서 
 ## 9.7 Grading Question
 formatting된 json을 바탕으로 streamlit 에서 question form 작성 
 ## 9.8 Function Calling
+GPT3나 GPT4를 사용할 때 가능한 방법임. llm에 함수를 binding하고 이 함수를 실행해서 원하는 형태의 output을 만들 수 있음.
+
+예제에서는 quiz를 만드는 함수를 정의하고 해당 함수를 실행하도록 함. 실제 함수가 있는지는 상관 없고 이러한 동작을 하는 함수가 있다고 정의를 해 두면 해당 정의대로 llm이 수행해서 결과를 보여줌.
 ## 9.9 Conclusion
