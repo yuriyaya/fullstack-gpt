@@ -15,6 +15,7 @@ Tokenizer: https://platform.openai.com/tokenizer
 
 wikipedia retriever는 왜인지 작동을 하지 않는다. 에러 발생... 검색해도 이유를 모르겠음.
 ## 9.4 Formatter Prompt
+formatting prompt를 만들고 생성한 퀴즈를 formatting chain에 넣어서 원하는대로 formatting 해달라고 함.
 ## 9.5 Output Parser
 ## 9.6 Caching
 ## 9.7 Grading Question
