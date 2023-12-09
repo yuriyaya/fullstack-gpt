@@ -22,5 +22,6 @@ formatting 된 결과를 output parser를 통해서 json object로 변경
 ## 9.6 Caching
 wikipedia search하는 동작이랑 quiz 생성하는 동작을 streamlit에서 cache 해서 반복적으로 동작하지 않도록 수정
 ## 9.7 Grading Question
+formatting된 json을 바탕으로 streamlit 에서 question form 작성 
 ## 9.8 Function Calling
 ## 9.9 Conclusion
