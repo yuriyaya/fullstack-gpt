@@ -18,6 +18,7 @@ wikipedia retriever는 왜인지 작동을 하지 않는다. 에러 발생... �
 ## 9.4 Formatter Prompt
 formatting prompt를 만들고 생성한 퀴즈를 formatting chain에 넣어서 원하는대로 formatting 해달라고 함.
 ## 9.5 Output Parser
+formatting 된 결과를 output parser를 통해서 json object로 변경
 ## 9.6 Caching
 ## 9.7 Grading Question
 ## 9.8 Function Calling

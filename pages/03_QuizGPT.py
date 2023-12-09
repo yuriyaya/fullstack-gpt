@@ -1,4 +1,5 @@
 import streamlit as st
+import json
 
 from langchain.chat_models import ChatOpenAI
 from langchain.retrievers import WikipediaRetriever
@@ -8,6 +9,7 @@ from langchain.document_loaders import UnstructuredFileLoader
 from langchain.prompts import ChatPromptTemplate
 from langchain.callbacks import StreamingStdOutCallbackHandler
 from langchain.schema.runnable import RunnableLambda
+from langchain.schema import BaseOutputParser, output_parser
 
 st.set_page_config(
     page_title="QuizGPT",
@@ -15,6 +17,16 @@ st.set_page_config(
 )
 
 st.title("QuizGPT")
+
+
+class JsonOutputParser(BaseOutputParser):
+    def parse(self, text):
+        text = text.replace("```", "").replace("json", "")
+        return json.loads(text)
+
+
+output_parser = JsonOutputParser()
+
 
 llm = ChatOpenAI(
     temperature=0.1,
@@ -256,7 +268,5 @@ else:
     start = st.button("Generate Quiz")
 
     if start:
-        question_response = question_chain.invoke(docs)
-        formatting_response = formatting_chain.invoke(
-            {"context": question_response.content}
-        )
+        chain = {"context": question_chain} | formatting_chain | output_parser
+        chain.invoke(docs)
