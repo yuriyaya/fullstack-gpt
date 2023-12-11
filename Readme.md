@@ -1,15 +1,10 @@
-# 10. Site GPT
-## 10.0 Introduction
-## 10.1 AsyncChromiumLoader
-playwright를 사용해서 (Selenium 비슷한 브라우저 실행하는 것) langchain 주소에서 text data를 추출하는 과정
-## 10.2 SitemapLoader
-SitemapLoader를 통해서 sitemap 정보를 생성하고 관련된 metadata도 생성.
-
-하지만 SSL error가 나서 동작하지 않는다 ㅠㅠ
-## 10.3 Parsing Function
-filtering url, text 정리(soup 사용해서), split 하기 까지
-
-여전히 에러로 동작 확인은 못해봄
-## 10.4 Map Re Rank Chain
-## 10.5 Map Re Rank Chain part Two
-## 10.6 Code Challenge
+# 11. Meeting GPT
+## 11.0 Introduction
+## 11.1 Audio Extraction
+## 11.2 Cutting The Audio
+## 11.3 Whisper Transcript
+## 11.4 Recap
+## 11.5 Upload UI
+## 11.6 Refine Chain Plan
+## 11.7 Refine Chain
+## 11.8 Q&A Tab
