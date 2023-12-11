@@ -14,4 +14,5 @@ Whisper로 파일 보내서 script 파일 만들기
 ## 11.6 Refine Chain Plan
 transcript tab 완성(script 보여주기)
 ## 11.7 Refine Chain
+split한 doc를 순회하면서 prompt template을 통해 전체를 요약하기
 ## 11.8 Q&A Tab
