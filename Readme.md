@@ -7,6 +7,7 @@ ffmpeg -i files/video.mp4 -vn audio.mp3
 ## 11.2 Cutting The Audio
 pydub package: audio 10분 단위로 cutting
 ## 11.3 Whisper Transcript
+Whisper로 파일 보내서 script 파일 만들기
 ## 11.4 Recap
 ## 11.5 Upload UI
 ## 11.6 Refine Chain Plan
