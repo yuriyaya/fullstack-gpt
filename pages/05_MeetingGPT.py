@@ -1,26 +1,10 @@
 import streamlit as st
 import subprocess
-import os
-import glob
-from pydub import AudioSegment
 import math
-
+from pydub import AudioSegment
+import glob
 import openai
-
-st.set_page_config(
-    page_title="MeetingGPT",
-    page_icon="💼",
-)
-
-st.markdown(
-    """
-# MeetingGPT
-            
-Welcome to MeetingGPT, upload a video and I will give you a transcript, a summary and a chat bot to ask any questions about it.
-
-Get started by uploading a video file in the sidebar.
-"""
-)
+import os
 
 has_transcript = os.path.exists("./.cache/video.txt")
 
@@ -73,23 +57,51 @@ def cut_audio_in_chunks(audio_path, chunk_size, chunks_folder):
         )
 
 
+st.set_page_config(
+    page_title="MeetingGPT",
+    page_icon="💼",
+)
+
+st.markdown(
+    """
+# MeetingGPT
+            
+Welcome to MeetingGPT, upload a video and I will give you a transcript, a summary and a chat bot to ask any questions about it.
+
+Get started by uploading a video file in the sidebar.
+"""
+)
+
 with st.sidebar:
     video = st.file_uploader(
         "Video",
         type=["mp4", "avi", "mkv", "mov"],
     )
+
 if video:
     chunks_folder = "./.cache/chunks"
-    with st.status("Loading video..."):
+    with st.status("Loading video...") as status:
         video_content = video.read()
         video_path = f"./.cache/{video.name}"
         audio_path = video_path.replace("mp4", "mp3")
         transcript_path = video_path.replace("mp4", "txt")
         with open(video_path, "wb") as f:
             f.write(video_content)
-    with st.status("Extracting audio..."):
+        status.update(label="Extracting audio...")
         extract_audio_from_video(video_path)
-    with st.status("Cutting audio segments..."):
+        status.update(label="Cutting audio segments...")
         cut_audio_in_chunks(audio_path, 10, chunks_folder)
-    with st.status("Transcribing audio..."):
+        status.update(label="Transcribing audio...")
         transcribe_chunks(chunks_folder, transcript_path)
+
+    transcript_tab, summary_tab, qa_tab = st.tabs(
+        [
+            "Transcript",
+            "Summary",
+            "Q&A",
+        ]
+    )
+
+    with transcript_tab:
+        with open(transcript_path, "r") as file:
+            st.write(file.read())
