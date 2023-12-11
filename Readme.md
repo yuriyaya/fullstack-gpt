@@ -1,6 +1,9 @@
 # 11. Meeting GPT
 ## 11.0 Introduction
 ## 11.1 Audio Extraction
+동영상에서 오디오만 추출하기 - ffmpeg 사용
+
+ffmpeg -i files/video.mp4 -vn audio.mp3
 ## 11.2 Cutting The Audio
 ## 11.3 Whisper Transcript
 ## 11.4 Recap
