@@ -19,7 +19,7 @@ Here are the apps I provide:
 - [x] [PrivateGPT](/PrivateGPT)
 - [x] [QuizGPT](/QuizGPT)
 - [ ] [SiteGPT](/SiteGPT)
-- [ ] [MeetingGPT](/MeetingGPT)
+- [x] [MeetingGPT](/MeetingGPT)
 - [ ] [InvestorGPT](/InvestorGPT)
 """
 )
