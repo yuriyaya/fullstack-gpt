@@ -10,6 +10,7 @@ pydub package: audio 10분 단위로 cutting
 Whisper로 파일 보내서 script 파일 만들기
 ## 11.4 Recap
 ## 11.5 Upload UI
+지금까지 한걸 토대로 video 파일을 올리면 오디오 추출 하고 사이즈 나누고 script파일 생성하는 것 까지 UI를 통해서 해보기
 ## 11.6 Refine Chain Plan
 ## 11.7 Refine Chain
 ## 11.8 Q&A Tab
